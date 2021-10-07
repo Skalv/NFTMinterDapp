@@ -1,5 +1,5 @@
 <template>
-  <div class="container fixed-bottom">
+  <div class="container">
     <div class="row">
       <div class="col">
         <p>Cute Poop NFT collection</p>

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+$purple: #CC00FF;
+$red: #FF002E;
+$softBlack: #4E636B;
+$grey: #8A8C97;
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import "animate.css";
+
+.wrapper {
+  background: url("~/assets/images/ground.png") repeat-x;
+  background-color: #141a28;
+}
+
+.cta {
+  background: linear-gradient(90deg, $purple 0%, $red 100%);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+@mixin title {
+  font-family: 'Luckiest Guy';
+  font-size: 55px;
+  text-transform: uppercase;
+  span {
+    background: linear-gradient(90deg, $purple 0%, $red 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@import "components/Header", "pages/index";

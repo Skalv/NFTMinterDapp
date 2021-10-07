@@ -14,3 +14,29 @@ export const mutations = {
     state.toaster = payload
   }
 }
+
+export const actions = {
+  async nuxtServerInit({ dispatch }, { $config }) {
+    await dispatch('fetchFromPinata')
+  },
+  async fetchFromPinata() {
+    const filters = {
+      status: 'pinned',
+      metadata: {
+        keyvalues: {
+          type: {
+            value: 'json',
+            op: 'eq'
+          },
+          collection: {
+            value: '1',
+            op: 'eq'
+          }
+        }
+      }
+    }
+    const result = await this.$pinata.pinList(filters)
+
+    console.log(result)
+  }
+}

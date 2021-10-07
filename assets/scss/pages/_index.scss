@@ -1,0 +1,148 @@
+#History {
+  padding-top: 100px;
+  h2 {
+    color: white;
+    @include title;
+  }
+  p {
+    color: $grey;
+  }
+  .drafts {
+    display: flex;
+    align-items: center;
+    .imgContainer {
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      &:first-child {
+        position: relative;
+        right: -50px;
+        width: 225px;
+        height: 190px;
+        background-color: white;
+        transform: rotate(-11deg);
+        opacity: .6;
+        img {
+          transform: scale(1.5);
+        }
+      }
+      &:nth-child(2) {
+        width: 270px;
+        height: 225px;
+        background-color: white;
+        transform: rotate(-5deg);
+        img {
+          transform: scale(1.7);
+        }
+      }
+      &:last-child {
+        position: relative;
+        left: -50px;
+        width: 350px;
+        height: 295px;
+        background-color: #6DD281;
+        transform: rotate(5deg);
+        img {
+          transform: scale(1.4);
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+    }
+  }
+}
+
+#Roadmap {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  h2 {
+    text-align: center;
+    @include title;
+  }
+
+  .milestone {
+    align-items: center;
+    position: relative;
+    .text {
+      padding: 1em;
+      h4 {
+        color: white;
+        font-size: 25px;
+        font-family: 'Luckiest Guy';
+        text-transform: uppercase;
+      }
+      p {
+        color: $grey;
+      }
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      p {
+        text-align: center;
+        vertical-align: center;
+        margin-bottom: 0;
+        width:80px;
+        height: 80px;
+        font-family: 'Luckiest Guy';
+        font-size: 50px;
+        background: #141a28;
+        border-radius: 50%;
+        position: relative;
+        padding-top: 10px;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          margin: -4px;
+          border-radius: inherit;
+          background: linear-gradient(90deg, $purple 0%, $red 100%);
+        }
+      }
+    }
+    &:after {
+      content: "";
+      border: 3px solid #4B465C;
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: calc(50% - 3px);
+      z-index: 5;
+    }
+    &:last-child {
+      &:after {
+        bottom: 50%;
+      }
+    }
+  }
+  .milestone ~ .milestone {
+    &:after {
+      top: 0;
+    }
+  }
+}
+
+#Attributes {
+  padding-top: 100px;
+  h2 {
+    color: white;
+    @include title;
+  }
+  p {
+    color: $grey;
+  }
+}

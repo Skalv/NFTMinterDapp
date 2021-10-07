@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'NFTMinter',
+    title: 'CutePoopNFT',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,11 +18,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "@/assets/scss/main.scss"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: "~/plugins/minter.js", mode: "client" }
+    { src: "~/plugins/alchemy.js", mode: "client" },
+    { src: "~/plugins/pinata.js", mode: "server" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,6 +54,11 @@ export default {
     PINATA_KEY: process.env.PINATA_KEY,
     ALCHEMY_API: process.env.ALCHEMY_API,
     CONTRACT_ABI: require('./contracts/poop-contract-abi.json'),
-    CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS
+    CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS,
+    GAS_LIMIT: 285000,
+    WEI_COST: "0.04" // in ether
+  },
+  privateRuntimeConfig: {
+    PINATA_SECRET: process.env.PINATA_SECRET
   }
 }
