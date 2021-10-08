@@ -1,15 +1,19 @@
 #History {
-  padding-top: 100px;
+  padding-top: 150px;
   h2 {
     color: white;
     @include title;
   }
   p {
-    color: $grey;
+    color: white;
   }
   .drafts {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
     .imgContainer {
       border-radius: 16px;
       display: flex;
@@ -18,32 +22,73 @@
       overflow: hidden;
       &:first-child {
         position: relative;
-        right: -50px;
+        right: -160px;
         width: 225px;
-        height: 190px;
-        background-color: white;
-        transform: rotate(-11deg);
-        opacity: .6;
+        background-color: rgba(255, 255, 255, 1);
+        opacity: .9;
+        animation: cardPlacement1 2s;
+        animation-fill-mode: both;
+        animation-delay: .5s;
+        height: 90px;
+        @media (min-width: 576px) {
+          height: 130px;
+        }
+        @media (min-width: 768px) {
+          height: 190px;
+        }
+        @media (min-width: 992px) {
+          height: 260px;
+        }
+        @media (min-width: 1200px) {
+          height: 295px;
+        }
         img {
           transform: scale(1.5);
         }
       }
       &:nth-child(2) {
         width: 270px;
-        height: 225px;
         background-color: white;
-        transform: rotate(-5deg);
+        z-index: 2;
+        height: 140px;
+        @media (min-width: 576px) {
+          height: 225px;
+        }
+        @media (min-width: 768px) {
+          height: 165px;
+        }
+        @media (min-width: 992px) {
+          height: 220px;
+        }
+        @media (min-width: 1200px) {
+          height: 225px;
+        }
         img {
           transform: scale(1.7);
         }
       }
       &:last-child {
         position: relative;
-        left: -50px;
+        left: -215px;
         width: 350px;
-        height: 295px;
         background-color: #6DD281;
-        transform: rotate(5deg);
+        animation: cardPlacement2 2s;
+        animation-delay: .5s;
+        animation-fill-mode: both;
+        z-index: 3;
+        height: 190px;
+        @media (min-width: 576px) {
+          height: 295px;
+        }
+        @media (min-width: 768px) {
+          height: 190px;
+        }
+        @media (min-width: 992px) {
+          height: 260px;
+        }
+        @media (min-width: 1200px) {
+          height: 295px;
+        }
         img {
           transform: scale(1.4);
         }
@@ -58,7 +103,7 @@
 }
 
 #Roadmap {
-  padding-top: 100px;
+  padding-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +125,7 @@
         text-transform: uppercase;
       }
       p {
-        color: $grey;
+        color: white;
       }
     }
     .divider {
@@ -114,14 +159,16 @@
         }
       }
     }
-    &:after {
-      content: "";
-      border: 3px solid #4B465C;
-      position: absolute;
-      top: 50%;
-      bottom: 0;
-      left: calc(50% - 3px);
-      z-index: 5;
+    @media (min-width: 768px) {
+      &:after {
+        content: "";
+        border: 3px solid #4B465C;
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: calc(50% - 3px);
+        z-index: 5;
+      }
     }
     &:last-child {
       &:after {
@@ -137,12 +184,109 @@
 }
 
 #Attributes {
-  padding-top: 100px;
+  padding-top: 200px;
+  align-items: center;
   h2 {
     color: white;
     @include title;
   }
   p {
-    color: $grey;
+    color: white;;
+  }
+}
+
+#Team {
+  padding-top: 200px;
+  h2 {
+    color: white;
+    @include title;
+  }
+  p {
+    color: white;;
+  }
+  .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+      font-family: "Luckiest Guy";
+      color: white;
+    }
+  }
+}
+
+#FAQ {
+  padding-top: 200px;
+  color: white;
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    text-align: center;
+    color: white;
+    @include title;
+  }
+  .questions {
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 90%;
+    }
+    @media (min-width: 992px) {
+      width: 70%;
+    }
+    background: none;
+    border: 2px solid #C4C4C4;
+    border-radius: 16px;
+    .question {
+      background: none;
+      border-bottom: 1px solid #C4C4C4;
+      .card-header button {
+        background: none;
+        border: none;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          margin-bottom: 0;
+        }
+        span {
+          font-size: 20px;
+          line-height: 20px;
+          border: 2px solid #C4C4C4;;
+          border-radius: 50%;
+          padding: 5px 10px;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+#Mint {
+  padding-top: 200px;
+  h2 {
+    color: white;
+    @include title;
+  }
+  p {
+    color: white;
+  }
+  div:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      font-size: 2em;
+      padding: 20px 30px;
+    }
   }
 }

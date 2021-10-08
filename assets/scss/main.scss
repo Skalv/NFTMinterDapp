@@ -5,8 +5,12 @@ $red: #FF002E;
 $softBlack: #4E636B;
 $grey: #8A8C97;
 
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat&display=swap');
 @import "animate.css";
+
+body {
+  font-family: Montserrat;
+}
 
 .wrapper {
   background: url("~/assets/images/ground.png") repeat-x;
@@ -33,4 +37,5 @@ $grey: #8A8C97;
   }
 }
 
-@import "components/Header", "pages/index";
+@import "animations/drafts";
+@import "components/Header", "pages/index", "components/Footer";

@@ -3,59 +3,29 @@
     <div class="row">
       <div class="col">
         <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav class="Menu">
+            <a href="#History" class="nav-link">History</a>
+            <a href="#Roadmap" class="nav-link">Roadmap</a>
+            <a href="#Attributes" class="nav-link">Attributes</a>
+            <a href="/" class="logo">
+              <img
+                class="img-fluid"
+                src="~/assets/images/LOGO.png"
+                alt="CutePoop logo"
+              />
+            </a>
+            <a href="#Team" class="nav-link">Team</a>
+            <a href="#FAQ" class="nav-link">FAQ</a>
             <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#mainNavMenu"
-              aria-controls="mainNavMenu"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              v-if="walletAddress === ''"
+              class="btn btn-outline-primary"
+              @click="connectWallet()"
             >
-              <span class="navbar-toggler-icon"></span>
+              Start
             </button>
-
-            <div id="mainNavMenu" class="collapse navbar-collapse">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="#History" class="nav-link">History</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Roadmap" class="nav-link">Roadmap</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Attributes" class="nav-link">Attributes</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/" class="nav-link">
-                    <img
-                      class=""
-                      src="~/assets/images/LOGO.png"
-                      alt="CutePoop logo"
-                    />
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Team" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#FAQ" class="nav-link">FAQ</a>
-                </li>
-                <li class="nav-item">
-                  <button
-                    v-if="walletAddress === ''"
-                    class="btn btn-outline-primary ml-auto"
-                    @click="connectWallet()"
-                  >
-                    Connecter mon wallet
-                  </button>
-                  <button v-else class="btn btn-outline-primary ml-auto">
-                    {{ walletAddress | slice }}
-                  </button>
-                </li>
-              </ul>
-            </div>
+            <button v-else class="btn btn-outline-primary">
+              {{ walletAddress | slice }}
+            </button>
           </nav>
           <h1>You have never seen <span>your poop</span> like that</h1>
           <p>
@@ -85,7 +55,7 @@ import { mapState, mapMutations } from 'vuex'
 export default {
   filters: {
     slice(text) {
-      return `Connecté : ${text.slice(0, 7)}...`
+      return `${text.slice(0, 7)}...`
     },
   },
   computed: mapState(['walletAddress']),

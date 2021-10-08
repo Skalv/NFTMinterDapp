@@ -1,0 +1,18 @@
+@keyframes cardPlacement1 {
+  100% {
+    transform: rotate(-11deg);
+    @media(max-width: 575px) {
+      right: -20px;
+    }
+    @media (min-width: 576px) {
+      right: -40px;
+    }
+  }
+}
+
+@keyframes cardPlacement2 {
+  100% {
+    left: -20px;
+    transform: rotate(5deg);
+  }
+}

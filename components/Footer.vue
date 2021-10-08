@@ -1,8 +1,18 @@
 <template>
-  <div class="container">
+  <div id="Footer" class="container-fluid">
     <div class="row">
       <div class="col">
-        <p>Cute Poop NFT collection</p>
+        <a href="" target="_blank">
+          <img src="~/assets/images/discord.png" alt="Discord logo" />
+        </a>
+        <a href="" target="_blank">
+          <img src="~/assets/images/twitter.png" alt="Twitter logo" />
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Copyright Cute Poop - All rights reserved</p>
       </div>
     </div>
   </div>
