@@ -1,5 +1,6 @@
 #History {
   padding-top: 150px;
+  align-items: center;
   h2 {
     color: white;
     @include title;
@@ -10,90 +11,26 @@
   .drafts {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
-    @media (min-width: 768px) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 2em;
     .imgContainer {
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
       &:first-child {
         position: relative;
-        right: -160px;
-        width: 225px;
-        background-color: rgba(255, 255, 255, 1);
+        right: -40px;
+        transform: rotate(-10deg);
+        animation: draftSlide1 2s;
         opacity: .9;
-        animation: cardPlacement1 2s;
-        animation-fill-mode: both;
-        animation-delay: .5s;
-        height: 90px;
-        @media (min-width: 576px) {
-          height: 130px;
-        }
-        @media (min-width: 768px) {
-          height: 190px;
-        }
-        @media (min-width: 992px) {
-          height: 260px;
-        }
-        @media (min-width: 1200px) {
-          height: 295px;
-        }
-        img {
-          transform: scale(1.5);
-        }
       }
       &:nth-child(2) {
-        width: 270px;
-        background-color: white;
-        z-index: 2;
-        height: 140px;
-        @media (min-width: 576px) {
-          height: 225px;
-        }
-        @media (min-width: 768px) {
-          height: 165px;
-        }
-        @media (min-width: 992px) {
-          height: 220px;
-        }
-        @media (min-width: 1200px) {
-          height: 225px;
-        }
-        img {
-          transform: scale(1.7);
-        }
+        position: relative;
       }
       &:last-child {
         position: relative;
-        left: -215px;
-        width: 350px;
-        background-color: #6DD281;
-        animation: cardPlacement2 2s;
-        animation-delay: .5s;
-        animation-fill-mode: both;
-        z-index: 3;
-        height: 190px;
-        @media (min-width: 576px) {
-          height: 295px;
-        }
-        @media (min-width: 768px) {
-          height: 190px;
-        }
-        @media (min-width: 992px) {
-          height: 260px;
-        }
-        @media (min-width: 1200px) {
-          height: 295px;
-        }
-        img {
-          transform: scale(1.4);
-        }
+        left:-40px;
+        transform: rotate(5deg);
+        animation: draftSlide3 2s;
       }
       img {
+        border-radius: 16px;
         width: 100%;
         height: auto;
       }
@@ -192,6 +129,32 @@
   }
   p {
     color: white;;
+  }
+  .row {
+    padding-bottom: 5em;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      transform: rotate(10deg);
+      img {
+        width: 33.333%;
+        padding: 5px;
+        border-radius: 16px;
+        position: relative;
+        &:nth-child(1) {
+          top: 2em;
+        }
+        &:nth-child(4) {
+          top: 2em;
+        }
+        &:nth-child(2) {
+          top: 4em;
+        }
+        &:nth-child(5) {
+          top: 4em;
+        }
+      }
+    }
   }
 }
 

@@ -1,18 +1,32 @@
-@keyframes cardPlacement1 {
+@keyframes draftSlide1 {
+  0% {
+    opacity: 0;
+    right: -155px;
+    transform: rotate(0);
+  }
   100% {
-    transform: rotate(-11deg);
-    @media(max-width: 575px) {
-      right: -20px;
-    }
-    @media (min-width: 576px) {
-      right: -40px;
-    }
+    opacity: .9;
+    right: -40px;
+    transform: rotate(-10deg);
   }
 }
 
-@keyframes cardPlacement2 {
+@keyframes draftSlide2 {
+  0% {
+    opacity: 0;
+  }
   100% {
-    left: -20px;
+    opacity: .9;
+  }
+}
+
+@keyframes draftSlide3 {
+  0% {
+    left: -180px;
+    transform: rotate(0);
+  }
+  100% {
+    left: -40px;
     transform: rotate(5deg);
   }
 }

@@ -3,45 +3,70 @@
     <div class="row">
       <div class="col">
         <div class="container">
-          <nav class="Menu">
-            <a href="#History" class="nav-link">History</a>
-            <a href="#Roadmap" class="nav-link">Roadmap</a>
-            <a href="#Attributes" class="nav-link">Attributes</a>
-            <a href="/" class="logo">
-              <img
-                class="img-fluid"
-                src="~/assets/images/LOGO.png"
-                alt="CutePoop logo"
-              />
-            </a>
-            <a href="#Team" class="nav-link">Team</a>
-            <a href="#FAQ" class="nav-link">FAQ</a>
-            <button
-              v-if="walletAddress === ''"
-              class="btn btn-outline-primary"
-              @click="connectWallet()"
-            >
-              Start
-            </button>
-            <button v-else class="btn btn-outline-primary">
-              {{ walletAddress | slice }}
-            </button>
-          </nav>
-          <h1>You have never seen <span>your poop</span> like that</h1>
-          <p>
-            In a perfect world, we could imagine that even our poop reflects our
-            emotions and the trends of the moment. Cute or monstrous, our poop
-            remains our own creation, a reflection of our health and even our
-            mental state.
-          </p>
-          <button class="cta">Mint your own poop</button>
-          <div class="poops">
-            <img src="~/assets/images/poop-brown.png" alt="A brown poop" />
-            <img
-              src="~/assets/images/poop-poulpo.png"
-              alt="A poop with a poulp"
-            />
-            <img src="~/assets/images/poop-blue.png" alt="A blue poop" />
+          <div class="row">
+            <div class="col">
+              <nav class="Menu">
+                <a href="#History" class="nav-link">History</a>
+                <a href="#Roadmap" class="nav-link">Roadmap</a>
+                <a href="#Attributes" class="nav-link">Attributes</a>
+                <a href="/" class="logo">
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/LOGO.png"
+                    alt="CutePoop logo"
+                  />
+                </a>
+                <a href="#Team" class="nav-link">Team</a>
+                <a href="#FAQ" class="nav-link">FAQ</a>
+                <button
+                  v-if="walletAddress === ''"
+                  class="btn btn-outline-primary"
+                  @click="connectWallet()"
+                >
+                  Start
+                </button>
+                <button v-else class="btn btn-outline-primary">
+                  {{ walletAddress | slice }}
+                </button>
+              </nav>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h1>You have never seen <span>your poop</span> like that</h1>
+              <p>
+                In a perfect world, we could imagine that even our poop reflects
+                our emotions and the trends of the moment. Cute or monstrous,
+                our poop remains our own creation, a reflection of our health
+                and even our mental state.
+              </p>
+              <button class="cta">Mint your own poop</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col poops">
+              <div class="imgContainer">
+                <img
+                  class="img-fluid"
+                  src="~/assets/images/poop-header2.png"
+                  alt="A brown poop"
+                />
+              </div>
+              <div class="imgContainer">
+                <img
+                  class="img-fluid"
+                  src="~/assets/images/poop-header3.png"
+                  alt="A poop with a poulp"
+                />
+              </div>
+              <div class="imgContainer">
+                <img
+                  class="img-fluid"
+                  src="~/assets/images/poop-header1.png"
+                  alt="A blue poop"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

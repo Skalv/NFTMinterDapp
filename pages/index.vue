@@ -7,19 +7,19 @@
             <div class="col-12 col-md-6 order-md-1 drafts">
               <div class="imgContainer">
                 <img
-                  src="~/assets/images/draft_2.png"
+                  src="~/assets/images/draft_1.jpg"
                   alt="First draft of our NFT"
                 />
               </div>
               <div class="imgContainer">
                 <img
-                  src="~/assets/images/draft_1.png"
+                  src="~/assets/images/draft_2.jpg"
                   alt="First draft of our NFT"
                 />
               </div>
               <div class="imgContainer">
                 <img
-                  src="~/assets/images/draft_3.png"
+                  src="~/assets/images/draft_3.jpg"
                   alt="First draft of our NFT"
                 />
               </div>
@@ -44,8 +44,10 @@
                 </div>
               </div>
               <div class="row milestone">
-                <div class="offset-md-5 col-3 col-md-2 divider"><p>1</p></div>
-                <div class="col-9 col-md-5 text">
+                <div class="offset-md-5 col-12 col-sm-3 col-md-2 divider">
+                  <p>1</p>
+                </div>
+                <div class="col-12 col-sm-9 col-md-5 text">
                   <h4>Start drawing and brainstorming around CutePoop</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -56,8 +58,10 @@
                 </div>
               </div>
               <div class="row milestone">
-                <div class="col-3 col-md-2 order-md-2 divider"><p>2</p></div>
-                <div class="col-9 col-md-5 text">
+                <div class="col-12 col-sm-3 col-md-2 order-md-2 divider">
+                  <p>2</p>
+                </div>
+                <div class="col-12 col-sm-9 col-md-5 text">
                   <h4>Create a script to assembled randomly all CutePoops</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -68,8 +72,10 @@
                 </div>
               </div>
               <div class="row milestone">
-                <div class="offset-md-5 col-3 col-md-2 divider"><p>3</p></div>
-                <div class="col-9 col-md-4 text">
+                <div class="offset-md-5 col-12 col-sm-3 col-md-2 divider">
+                  <p>3</p>
+                </div>
+                <div class="col-12 col-sm-9 col-md-4 text">
                   <h4>Create a Dapp for minting on ethereum blockchain</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -80,8 +86,10 @@
                 </div>
               </div>
               <div class="row milestone">
-                <div class="col-3 col-md-2 order-md-2 divider"><p>4</p></div>
-                <div class="col-9 col-md-5 text">
+                <div class="col-12 col-sm-3 col-md-2 order-md-2 divider">
+                  <p>4</p>
+                </div>
+                <div class="col-12 col-sm-9 col-md-5 text">
                   <h4>Prepare some special CutePoops for twitter giveaway</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -92,8 +100,10 @@
                 </div>
               </div>
               <div class="row milestone">
-                <div class="offset-md-5 col-3 col-md-2 divider"><p>5</p></div>
-                <div class="col-9 col-md-4 text">
+                <div class="offset-md-5 col-12 col-sm-3 col-md-2 divider">
+                  <p>5</p>
+                </div>
+                <div class="col-12 col-sm-9 col-md-4 text">
                   <h4>Our mint live on October 12th</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -106,6 +116,42 @@
             </div>
           </div>
           <div id="Attributes" class="row">
+            <div class="offset-1 col-10 order-lg-1 offset-lg-0 col-lg-7">
+              <div class="row">
+                <div class="col gallery">
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/card-poop4.jpg"
+                    alt="Some poop of the first collection"
+                  />
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/card-poop5.jpg"
+                    alt="Some poop of the first collection"
+                  />
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/card-poop6.jpg"
+                    alt="Some poop of the first collection"
+                  />
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/card-poop7.jpg"
+                    alt="Some poop of the first collection"
+                  />
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/card-poop8.jpg"
+                    alt="Some poop of the first collection"
+                  />
+                  <img
+                    class="img-fluid"
+                    src="~/assets/images/card-poop9.jpg"
+                    alt="Some poop of the first collection"
+                  />
+                </div>
+              </div>
+            </div>
             <div class="col-12 col-lg-5">
               <h2>Over <span>10000</span> differents possibilities</h2>
               <p>
@@ -130,17 +176,6 @@
                 sit nisl amet.
               </p>
               <button class="cta">Mint your own poop</button>
-            </div>
-            <div class="col-12 col-lg-7 gallery">
-              <div class="row">
-                <div class="col">
-                  <img
-                    class="img-fluid"
-                    src="~/assets/images/galleryOfPoops.png"
-                    alt="Some poop of the first collection"
-                  />
-                </div>
-              </div>
             </div>
           </div>
           <div id="Team" class="row">
