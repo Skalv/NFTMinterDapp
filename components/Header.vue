@@ -8,7 +8,12 @@
           <a href="#Attributes" class="nav-link">Attributes</a>
           <a href="/" class="logo">
             <img
-              class="img-fluid"
+              class="img-fluid d-block d-sm-none"
+              src="~/assets/images/LOGO-mobile.png"
+              alt="CutePoop mobile logo"
+            />
+            <img
+              class="img-fluid d-none d-sm-block"
               src="~/assets/images/LOGO.png"
               alt="CutePoop logo"
             />
