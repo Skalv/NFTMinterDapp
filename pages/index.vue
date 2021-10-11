@@ -27,11 +27,14 @@
             <div class="col-12 col-md-6">
               <h2>Your <span>poops</span>, our history</h2>
               <p>
-                It's always a personal satisfaction to see that our poop has
-                been well designed. After reading this, will you look at your
-                poop the same way? Don't deny your poop, don't flush it until
-                you see what it looks like, don't be in denial, join the
-                CutePoopNFT adventure.
+                In a perfect world, we could imagine that even our poop reflects
+                our emotions and the trends of the moment. Cute or monstrous,
+                our poop remains our own creation, a reflection of our health
+                and even our mental state. It's always a personal satisfaction
+                to see that our poop has been well designed. After reading this,
+                will you look at your poop the same way? Don't deny your poop,
+                don't flush it until you see what it looks like, don't be in
+                denial, join the CutePoopNFT adventure.
               </p>
               <button class="cta">Mint your own poop</button>
             </div>
@@ -48,12 +51,13 @@
                   <p>1</p>
                 </div>
                 <div class="col-12 col-sm-9 col-md-5 text">
-                  <h4>Start drawing and brainstorming around CutePoop</h4>
+                  <h4>Start drawing and brainstorming aroundCutePoop</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Molestiae, amet, voluptatibus illum earum sapiente cum rerum
-                    aliquam quam distinctio doloremque quidem? Iusto illum
-                    ducimus cumque qui natus dolores dolorum nam.
+                    We have all drawn a poop at least once in our lives, but in
+                    the CutePoopNFT project it's all about sublimating the poop
+                    and dressing it up with a hat, glasses, an accessory or an
+                    insect to keep it company. All this will make your poo
+                    unique. So it takes time and we need some inspiration.
                   </p>
                 </div>
               </div>
@@ -64,10 +68,10 @@
                 <div class="col-12 col-sm-9 col-md-5 text">
                   <h4>Create a script to assembled randomly all CutePoops</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Molestiae, amet, voluptatibus illum earum sapiente cum rerum
-                    aliquam quam distinctio doloremque quidem? Iusto illum
-                    ducimus cumque qui natus dolores dolorum nam.
+                    Even at the bottom of the toilet an artist still needs to be
+                    supported by a developer in the CutePoopNFT project they are
+                    2, a junior and a senior work hand in hand to deliver you a
+                    quality script for a successful assembly of pretty poop.
                   </p>
                 </div>
               </div>
@@ -78,10 +82,11 @@
                 <div class="col-12 col-sm-9 col-md-4 text">
                   <h4>Create a Dapp for minting on ethereum blockchain</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Molestiae, amet, voluptatibus illum earum sapiente cum rerum
-                    aliquam quam distinctio doloremque quidem? Iusto illum
-                    ducimus cumque qui natus dolores dolorum nam.
+                    This is the visible part of the iceberg, here too the work
+                    must be meticulous, to offer you a quality user experience.
+                    We have done everything possible to ensure that our poop is
+                    pleasant to look at while sparing you any uncomfortable
+                    smell!
                   </p>
                 </div>
               </div>
@@ -92,10 +97,11 @@
                 <div class="col-12 col-sm-9 col-md-5 text">
                   <h4>Prepare some special CutePoops for twitter giveaway</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Molestiae, amet, voluptatibus illum earum sapiente cum rerum
-                    aliquam quam distinctio doloremque quidem? Iusto illum
-                    ducimus cumque qui natus dolores dolorum nam.
+                    The project artist is preparing a selection of impressive
+                    poop for you. These droppings will only be available during
+                    a contest and will not be available for mint. The date will
+                    be announced on our twitter page. Stay tuned so you don't
+                    miss this unique event!
                   </p>
                 </div>
               </div>
@@ -104,12 +110,13 @@
                   <p>5</p>
                 </div>
                 <div class="col-12 col-sm-9 col-md-4 text">
-                  <h4>Our mint live on October 12th</h4>
+                  <h4>Our mint live on October 22th</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Molestiae, amet, voluptatibus illum earum sapiente cum rerum
-                    aliquam quam distinctio doloremque quidem? Iusto illum
-                    ducimus cumque qui natus dolores dolorum nam.
+                    Remember this date well, this day will go down in history,
+                    never have poop had so much visibility. Long ignored and
+                    hated, how many of you flush the toilet without even looking
+                    at your poop... This time is over. Make way for the show. Be
+                    ready.
                   </p>
                 </div>
               </div>
