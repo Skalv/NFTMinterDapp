@@ -336,44 +336,5 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-
-export default {
-  computed: mapState(['walletAddress']),
-  methods: {
-    ...mapMutations(['toggleToast']),
-    async mintNFT() {
-      const amount = 1
-      const totalCost =
-        amount * this.$web3.utils.toWei(`${this.$config.WEI_COST}`)
-      const totalGasLimit =
-        amount * this.$web3.utils.toWei(`${this.$config.GAS_LIMIT}`, 'wei')
-      console.log(totalCost, totalGasLimit)
-
-      try {
-        const txHash = await window.ethereum.request({
-          method: 'eth_sendTransaction',
-          params: [
-            {
-              to: this.$config.CONTRACT_ADDRESS,
-              from: this.walletAddress,
-              data: this.$web3Contract.methods.mintNFT(amount).encodeABI(),
-              value: `${this.$web3.utils.toHex(totalCost)}`,
-              gasLimit: `${this.$web3.utils.toHex(totalGasLimit)}`,
-            },
-          ],
-        })
-        this.toggleToast({
-          text: `✅ Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/${txHash}`,
-          type: 'success',
-        })
-      } catch (err) {
-        this.toggleToast({
-          text: `😥 ${err.message}`,
-          type: 'danger',
-        })
-      }
-    },
-  },
-}
+export default {}
 </script>

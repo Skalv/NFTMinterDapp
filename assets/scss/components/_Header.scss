@@ -1,101 +1,106 @@
 #Header {
   background: url("~/assets/images/bathroom.png") no-repeat;
   background-size: cover;
-  .container {
-    padding: 0;
+  .Menu {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    nav.Menu {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .logo {
+      order: -1;
+    }
+    @media (min-width: 576px) {
+      nav.Menu {
+        a:nth-child(-n+3) {
+          order: -1;
+        }
+      }
       .logo {
-        order: -1;
+        order: 0;
       }
     }
-    h1 {
-      max-width: 640px;
-      margin-top: 50px;
-      text-align: center;
-      @include title;
-    }
-    p {
-      max-width: 700px;
-      text-align: center;
-      color: $softBlack;
-    }
+  }
+  h1 {
+    margin-top: 50px;
+    text-align: center;
+    @include title;
+  }
+  p {
+    max-width: 700px;
+    text-align: center;
+    color: $softBlack;
+  }
+  .IndexPage {
     .poops {
       margin-bottom: -10px;
       display: flex;
+      justify-content: center;
       align-items: flex-end;
       margin-top: 2em;
-      .imgContainer {
-        &:first-child {
-          position: relative;
-          right: -60px;
-          flex: 1;
-          animation: fadeInLeft;
-          animation-duration: 2s;
-        }
-        &:nth-child(2) {
-          flex:2;
-          z-index: 1;
-        }
-        &:last-child {
-          flex: 1;
-          position: relative;
-          left: -65px;
-          animation: fadeInRight;
-          animation-duration: 2s;
-        }
+      img:first-child {
+        position: relative;
+        right: -80px;
+        bottom: -5px;
+        flex: 1;
+        animation: fadeInLeft;
+        animation-duration: 2s;
       }
+      img:nth-child(2) {
+        flex:2;
+        z-index: 1;
+      }
+      img:last-child {
+        flex: 1;
+        position: relative;
+        left: -100px;
+        bottom: -5px;
+        animation: fadeInRight;
+        animation-duration: 2s;
+      }
+    }
+    .Hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    // @media (min-width: 576px) {
+    //   .poops {
+    //     &:first-child {
+    //       right: -70px;
+    //     }
+    //     &:last-child {
+    //       left: -75px;
+    //     }
+    //   }
+    // }
+
+    // @media (min-width: 768px) {
+    //   .poops {
+    //     .imgContainer {
+    //       &:first-child {
+    //         right: -80px;
+    //         bottom: -3px;
+    //       }
+    //       &:last-child {
+    //         left: -125px;
+    //         bottom: -5px;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  .MintPage {
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .side {
+      padding: 0;
     }
   }
-
-  @media (min-width: 576px) {
-    nav.Menu {
-      a:nth-child(-n+3) {
-        order: -1;
-      }
-    }
-    .logo {
-      order: 0;
-    }
-    .container {
-      .poops {
-        .imgContainer {
-          &:first-child {
-            right: -70px;
-          }
-          &:last-child {
-            left: -75px;
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      .poops {
-        .imgContainer {
-          &:first-child {
-            right: -80px;
-            bottom: -3px;
-          }
-          &:last-child {
-            left: -125px;
-            bottom: -5px;
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 992px) { }
-
-  @media (min-width: 1200px) { }
 }

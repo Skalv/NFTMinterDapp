@@ -2,73 +2,78 @@
   <div id="Header" class="container-fluid">
     <div class="row">
       <div class="col">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <nav class="Menu">
-                <a href="#History" class="nav-link">History</a>
-                <a href="#Roadmap" class="nav-link">Roadmap</a>
-                <a href="#Attributes" class="nav-link">Attributes</a>
-                <a href="/" class="logo">
-                  <img
-                    class="img-fluid"
-                    src="~/assets/images/LOGO.png"
-                    alt="CutePoop logo"
-                  />
-                </a>
-                <a href="#Team" class="nav-link">Team</a>
-                <a href="#FAQ" class="nav-link">FAQ</a>
-                <button
-                  v-if="walletAddress === ''"
-                  class="btn btn-outline-primary"
-                  @click="connectWallet()"
-                >
-                  Start
-                </button>
-                <button v-else class="btn btn-outline-primary">
-                  {{ walletAddress | slice }}
-                </button>
-              </nav>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <h1>You have never seen <span>your poop</span> like that</h1>
-              <p>
-                In a perfect world, we could imagine that even our poop reflects
-                our emotions and the trends of the moment. Cute or monstrous,
-                our poop remains our own creation, a reflection of our health
-                and even our mental state.
-              </p>
-              <button class="cta">Mint your own poop</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col poops">
-              <div class="imgContainer">
-                <img
-                  class="img-fluid"
-                  src="~/assets/images/poop-header2.png"
-                  alt="A brown poop"
-                />
-              </div>
-              <div class="imgContainer">
-                <img
-                  class="img-fluid"
-                  src="~/assets/images/poop-header3.png"
-                  alt="A poop with a poulp"
-                />
-              </div>
-              <div class="imgContainer">
-                <img
-                  class="img-fluid"
-                  src="~/assets/images/poop-header1.png"
-                  alt="A blue poop"
-                />
-              </div>
-            </div>
-          </div>
+        <nav class="Menu">
+          <a href="#History" class="nav-link">History</a>
+          <a href="#Roadmap" class="nav-link">Roadmap</a>
+          <a href="#Attributes" class="nav-link">Attributes</a>
+          <a href="/" class="logo">
+            <img
+              class="img-fluid"
+              src="~/assets/images/LOGO.png"
+              alt="CutePoop logo"
+            />
+          </a>
+          <a href="#Team" class="nav-link">Team</a>
+          <a href="#FAQ" class="nav-link">FAQ</a>
+          <button
+            v-if="walletAddress === ''"
+            class="btn btn-outline-primary"
+            @click="connectWallet()"
+          >
+            Start
+          </button>
+          <button v-else class="btn btn-outline-primary">
+            {{ walletAddress | slice }}
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div v-if="$route.name === 'index'" class="row IndexPage">
+      <div class="col Hero">
+        <h1>You have never seen <span>your poop</span> like that</h1>
+        <p>
+          In a perfect world, we could imagine that even our poop reflects our
+          emotions and the trends of the moment. Cute or monstrous, our poop
+          remains our own creation, a reflection of our health and even our
+          mental state.
+        </p>
+        <button class="cta">Mint your own poop</button>
+        <div class="poops">
+          <img
+            class="img-fluid d-none d-sm-block"
+            src="~/assets/images/poop-header2.png"
+            alt="A brown poop"
+          />
+          <img
+            class="img-fluid"
+            src="~/assets/images/poop-header3.png"
+            alt="A poop with a poulp"
+          />
+          <img
+            class="img-fluid d-none d-sm-block"
+            src="~/assets/images/poop-header1.png"
+            alt="A blue poop"
+          />
         </div>
+      </div>
+    </div>
+    <div v-else class="row MintPage">
+      <div class="col-auto d-none d-md-block side">
+        <img
+          src="~/assets/images/poop-zombie.png"
+          alt="A zombie poop"
+          class="img-fluid"
+        />
+      </div>
+      <div class="col title">
+        <h1>Stop <span>pooping</span>, go <span>minting</span> !!</h1>
+      </div>
+      <div class="col-auto d-none d-md-block side">
+        <img
+          src="~/assets/images/poop-gold.png"
+          alt="A golden poop"
+          class="img-fluid"
+        />
       </div>
     </div>
   </div>

@@ -10,11 +10,11 @@ $grey: #8A8C97;
 
 body {
   font-family: Montserrat;
+  background-color: #141a28;
 }
 
 .wrapper {
   background: url("~/assets/images/ground.png") repeat-x;
-  background-color: #141a28;
 }
 
 .cta {
@@ -38,4 +38,5 @@ body {
 }
 
 @import "animations/drafts";
-@import "components/Header", "pages/index", "components/Footer";
+@import "components/Header", "components/Footer";
+@import "pages/index", "pages/mint";
