@@ -6,23 +6,23 @@
           <div class="row">
             <div class="col minter">
               <h4>How many poop you want ?</h4>
-              <form>
+              <form @submit.prevent="mintNFT">
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <button
                       class="btn btn-outline-secondary"
                       type="button"
-                      @click="count--"
+                      @click="amount--"
                     >
                       -
                     </button>
                   </div>
-                  <input v-model="count" type="number" class="form-control" />
+                  <input v-model="amount" type="number" class="form-control" />
                   <div class="input-group-append">
                     <button
                       class="btn btn-outline-secondary"
                       type="button"
-                      @click="count++"
+                      @click="amount++"
                     >
                       +
                     </button>
@@ -44,28 +44,27 @@ import { mapState, mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      count: 1,
+      amount: 1,
     }
   },
   computed: mapState(['walletAddress']),
   watch: {
-    count() {
-      if (this.count > 20) {
-        this.count = 20
+    amount() {
+      if (this.amount > 20) {
+        this.amount = 20
       }
-      if (this.count < 1) {
-        this.count = 1
+      if (this.amount < 1) {
+        this.amount = 1
       }
     },
   },
   methods: {
     ...mapMutations(['toggleToast']),
     async mintNFT() {
-      const amount = 1
       const totalCost =
-        amount * this.$web3.utils.toWei(`${this.$config.WEI_COST}`)
+        this.amount * this.$web3.utils.toWei(`${this.$config.WEI_COST}`)
       const totalGasLimit =
-        amount * this.$web3.utils.toWei(`${this.$config.GAS_LIMIT}`, 'wei')
+        this.amount * this.$web3.utils.toWei(`${this.$config.GAS_LIMIT}`, 'wei')
 
       try {
         const txHash = await window.ethereum.request({
@@ -74,7 +73,7 @@ export default {
             {
               to: this.$config.CONTRACT_ADDRESS,
               from: this.walletAddress,
-              data: this.$web3Contract.methods.mintNFT(amount).encodeABI(),
+              data: this.$web3Contract.methods.mintNFT(this.amount).encodeABI(),
               value: `${this.$web3.utils.toHex(totalCost)}`,
               gasLimit: `${this.$web3.utils.toHex(totalGasLimit)}`,
             },
