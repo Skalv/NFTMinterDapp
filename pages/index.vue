@@ -36,7 +36,7 @@
                 don't flush it until you see what it looks like, don't be in
                 denial, join the CutePoopNFT adventure.
               </p>
-              <nuxt-link :to="'/mint'">
+              <nuxt-link v-if="hereComeTheTime" :to="'/mint'">
                 <button class="cta">Mint your own poop</button>
               </nuxt-link>
             </div>
@@ -181,14 +181,14 @@
                 CutePoop for airdroped to our community (Or maybe you who read
                 this) !
               </p>
-              <nuxt-link :to="'/mint'">
+              <nuxt-link v-if="hereComeTheTime" :to="'/mint'">
                 <button class="cta">Mint your own poop</button>
               </nuxt-link>
             </div>
           </div>
           <div id="Team" class="row">
             <div class="col">
-              <div class="row align-items-end">
+              <div class="row align-items-end mb-4">
                 <div class="col-12 col-lg-4">
                   <h2>Oh what a <span>poop gang</span></h2>
                 </div>
@@ -197,7 +197,7 @@
                     Yes ! Is a team behind this project ! We are three friends,
                     blockchains and crypto enthousiams. Each of us have is
                     speciality, designer, developer, communication... We hare
-                    glad to prensents you our poops ! Yes it's a joke at the
+                    glad to presents you our poops ! Yes it's a joke at the
                     beginning, but what a joke ! (PS: we don't use our real
                     name, but if you want, with some reseach you can find us !)
                   </p>
@@ -207,7 +207,7 @@
                 <div class="col-12 col-md member">
                   <img
                     class="img-fluid"
-                    src="~/assets/images/member.png"
+                    src="~/assets/images/poop-team3.png"
                     alt="Our designer"
                   />
                   <h4>Mouz Al Rallaoui II</h4>
@@ -216,7 +216,7 @@
                 <div class="col-12 col-md member">
                   <img
                     class="img-fluid"
-                    src="~/assets/images/member.png"
+                    src="~/assets/images/poop-team1.png"
                     alt="Our designer"
                   />
                   <h4>Gavin Skalv</h4>
@@ -225,7 +225,7 @@
                 <div class="col-12 col-md member">
                   <img
                     class="img-fluid"
-                    src="~/assets/images/member.png"
+                    src="~/assets/images/poop-team2.png"
                     alt="Our designer"
                   />
                   <h4>Beniamin Axurit</h4>
@@ -236,7 +236,7 @@
           </div>
           <div id="FAQ" class="row">
             <div class="col">
-              <h2>Question <span>in poop</span></h2>
+              <h2 class="mb-4">Question <span>in poop</span></h2>
               <div class="accordion questions" role="tablist">
                 <b-card no-body class="question">
                   <b-card-header header-tag="header" class="p-1" role="tab">
@@ -323,9 +323,12 @@
               </p>
             </div>
             <div class="col-12 col-md-4 col-lg-6">
-              <nuxt-link :to="'/mint'">
+              <nuxt-link v-if="hereComeTheTime" :to="'/mint'">
                 <button class="cta">Mint your own poop</button>
               </nuxt-link>
+              <button v-else class="cta">
+                Mint your poop {{ $config.REVEAL_DATE | displayDate }}
+              </button>
             </div>
           </div>
         </div>
@@ -335,5 +338,18 @@
 </template>
 
 <script>
-export default {}
+const moment = require('moment')
+
+export default {
+  filters: {
+    displayDate(date) {
+      return moment(date).fromNow()
+    },
+  },
+  computed: {
+    hereComeTheTime() {
+      return moment(this.$config.REVEAL_DATE).isBefore(moment())
+    },
+  },
+}
 </script>

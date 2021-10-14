@@ -2,10 +2,10 @@
   <div id="Footer" class="container-fluid">
     <div class="row">
       <div class="col">
-        <a href="" target="_blank">
+        <a href="https://discord.gg/MHF9xhC5" target="_blank">
           <img src="~/assets/images/discord.png" alt="Discord logo" />
         </a>
-        <a href="" target="_blank">
+        <a href="https://twitter.com/CutePOOPNFT" target="_blank">
           <img src="~/assets/images/twitter.png" alt="Twitter logo" />
         </a>
       </div>

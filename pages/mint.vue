@@ -4,7 +4,11 @@
       <div class="col">
         <div class="container">
           <div class="row">
-            <div class="col minter">
+            <div v-if="!hereComeTheTime" class="col timer">
+              <h4>Sale and reveal {{ $config.REVEAL_DATE | displayDate }}</h4>
+              <p>Please, be patient !</p>
+            </div>
+            <div v-else class="col minter">
               <h4>How many poop you want ?</h4>
               <form @submit.prevent="mintNFT">
                 <div class="input-group">
@@ -40,14 +44,25 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+const moment = require('moment')
 
 export default {
+  filters: {
+    displayDate(date) {
+      return moment(date).fromNow()
+    },
+  },
   data() {
     return {
       amount: 1,
     }
   },
-  computed: mapState(['walletAddress']),
+  computed: {
+    ...mapState(['walletAddress']),
+    hereComeTheTime() {
+      return moment(this.$config.REVEAL_DATE).isBefore(moment())
+    },
+  },
   watch: {
     amount() {
       if (this.amount > 20) {

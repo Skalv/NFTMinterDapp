@@ -1,3 +1,5 @@
+import moment from "moment"
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -56,7 +58,8 @@ export default {
     CONTRACT_ABI: require('./contracts/poop-contract-abi.json'),
     CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS,
     GAS_LIMIT: 285000,
-    WEI_COST: "0.04" // in ether
+    WEI_COST: "0.04", // in ether
+    REVEAL_DATE: moment("2021-10-22T10")
   },
   privateRuntimeConfig: {
     PINATA_SECRET: process.env.PINATA_SECRET

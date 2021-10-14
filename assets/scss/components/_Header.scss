@@ -9,6 +9,22 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    a {
+      color: #3E2C4D;
+      &:hover {
+        font-weight: 700;
+        color: #ff012f;
+      }
+    }
+    button {
+      border-color: #3E2C4D;
+      color: #3E2C4D;
+      &:hover {
+        color: white;
+        background-color: #ff012f;
+        border-color: #ff012f;
+      }
+    }
     .logo {
       order: -1;
     }

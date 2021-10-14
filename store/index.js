@@ -17,7 +17,7 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ dispatch }, { $config }) {
-    await dispatch('fetchFromPinata')
+    // await dispatch('fetchFromPinata')
   },
   async fetchFromPinata() {
     const filters = {

@@ -22,6 +22,8 @@ body {
 
 .wrapper {
   background: url("~/assets/images/ground.png") repeat-x;
+  position:relative;
+  z-index: 50;
 }
 
 .cta {

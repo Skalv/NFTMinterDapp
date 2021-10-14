@@ -42,7 +42,12 @@
           remains our own creation, a reflection of our health and even our
           mental state.
         </p>
-        <button class="cta">Mint your own poop</button>
+        <nuxt-link v-if="hereComeTheTime" :to="'/mint'">
+          <button class="cta">Mint your own poop</button>
+        </nuxt-link>
+        <button v-else class="cta">
+          Mint your poop {{ $config.REVEAL_DATE | displayDate }}
+        </button>
         <div class="poops">
           <img
             class="img-fluid d-none d-sm-block"
@@ -86,14 +91,23 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+const moment = require('moment')
 
 export default {
   filters: {
     slice(text) {
       return `${text.slice(0, 7)}...`
     },
+    displayDate(date) {
+      return moment(date).fromNow()
+    },
   },
-  computed: mapState(['walletAddress']),
+  computed: {
+    ...mapState(['walletAddress']),
+    hereComeTheTime() {
+      return moment(this.$config.REVEAL_DATE).isBefore(moment())
+    },
+  },
   mounted() {
     if (window.ethereum) {
       this.getCurrentWalletConnected()
