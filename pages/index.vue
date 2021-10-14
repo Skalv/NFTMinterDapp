@@ -36,7 +36,9 @@
                 don't flush it until you see what it looks like, don't be in
                 denial, join the CutePoopNFT adventure.
               </p>
-              <button class="cta">Mint your own poop</button>
+              <nuxt-link :to="'/mint'">
+                <button class="cta">Mint your own poop</button>
+              </nuxt-link>
             </div>
           </div>
           <div id="Roadmap" class="row">
@@ -162,27 +164,26 @@
             <div class="col-12 col-lg-5">
               <h2>Over <span>10000</span> differents possibilities</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-                varius et ut vel. Posuere fringilla neque risus dolor mi vitae,
-                laoreet ornare pretium. Elementum iaculis fermentum nisl
-                consectetur accumsan, leo id risus.
+                Our designer worked on over 125 drawings, that give us over 5kk
+                unique possibilities, and we select just 10,000.
               </p>
               <p>
-                Vitae duis et elit nam at id volutpat. Quisque enim vitae est
-                elit aenean mattis mi est consectetur.
+                We have 6 differents layers with a miminum of 12 possibilities
+                in.
               </p>
               <p>
-                Urna, amet ac eget libero urna dui. Accumsan, nisl aliquet
-                faucibus vitae eget condimentum. Enim, erat suspendisse sed
-                morbi ullamcorper at enim erat libero. Eu augue lectus fusce
-                ante nulla.
+                We use a generator script that assembling each layer with a
+                rarity score on each drawing. Each CutePoop is unique and some
+                of this a more rarible (based on this traits) than other.
               </p>
               <p>
-                Est facilisis dui nunc risus tincidunt at sit. Vivamus felis
-                tempus egestas ut dui. Arcu scelerisque vestibulum ullamcorper
-                sit nisl amet.
+                We also generating and design some other unique and specifics
+                CutePoop for airdroped to our community (Or maybe you who read
+                this) !
               </p>
-              <button class="cta">Mint your own poop</button>
+              <nuxt-link :to="'/mint'">
+                <button class="cta">Mint your own poop</button>
+              </nuxt-link>
             </div>
           </div>
           <div id="Team" class="row">
@@ -193,10 +194,12 @@
                 </div>
                 <div class="col-12 col-lg-6">
                   <p>
-                    In a perfect world, we could imagine that even our poop
-                    reflects our emotions and the trends of the moment. Cute or
-                    monstrous, our poop remains our own creation, a reflection
-                    of our health and even our mental state.
+                    Yes ! Is a team behind this project ! We are three friends,
+                    blockchains and crypto enthousiams. Each of us have is
+                    speciality, designer, developer, communication... We hare
+                    glad to prensents you our poops ! Yes it's a joke at the
+                    beginning, but what a joke ! (PS: we don't use our real
+                    name, but if you want, with some reseach you can find us !)
                   </p>
                 </div>
               </div>
@@ -238,7 +241,7 @@
                 <b-card no-body class="question">
                   <b-card-header header-tag="header" class="p-1" role="tab">
                     <b-button v-b-toggle.question-1 block>
-                      <p>Where are the images for the poops storeed?</p>
+                      <p>What is the release date ?</p>
                       <span>+</span>
                     </b-button>
                   </b-card-header>
@@ -246,10 +249,9 @@
                   <b-collapse id="question-1" role="tabpanel">
                     <b-card-body>
                       <b-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minus, eligendi maiores repellendus in voluptatum alias
-                        incidunt hic. Debitis, molestias necessitatibus eum id
-                        quis placeat repellat, reiciendis quo officia qui sint?
+                        October 12th at 12PM PST, 3PM EST, 9PM CEST we will
+                        launch the one and only sale of our CutePoop. Be ready
+                        for the event, there will be no pre-sales.
                       </b-card-text>
                     </b-card-body>
                   </b-collapse>
@@ -258,7 +260,7 @@
                 <b-card no-body class="question">
                   <b-card-header header-tag="header" class="p-1" role="tab">
                     <b-button v-b-toggle.question-2 block>
-                      <p>Where are the images for the poops storeed?</p>
+                      <p>What is the NFT distribution ?</p>
                       <span>+</span>
                     </b-button>
                   </b-card-header>
@@ -266,10 +268,9 @@
                   <b-collapse id="question-2" role="tabpanel">
                     <b-card-body>
                       <b-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minus, eligendi maiores repellendus in voluptatum alias
-                        incidunt hic. Debitis, molestias necessitatibus eum id
-                        quis placeat repellat, reiciendis quo officia qui sint?
+                        A total of 10,000 unique CutePoop NFT will be release.
+                        On this 10,000 64 will be locked (12 for the team, 20
+                        for marketing and 32 for an airdrop !).
                       </b-card-text>
                     </b-card-body>
                   </b-collapse>
@@ -277,7 +278,7 @@
                 <b-card no-body class="question">
                   <b-card-header header-tag="header" class="p-1" role="tab">
                     <b-button v-b-toggle.question-3 block>
-                      <p>Where are the images for the poops storeed?</p>
+                      <p>Whats the price of a CutePoop ?</p>
                       <span>+</span>
                     </b-button>
                   </b-card-header>
@@ -285,10 +286,9 @@
                   <b-collapse id="question-3" role="tabpanel">
                     <b-card-body>
                       <b-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minus, eligendi maiores repellendus in voluptatum alias
-                        incidunt hic. Debitis, molestias necessitatibus eum id
-                        quis placeat repellat, reiciendis quo officia qui sint?
+                        Each CutePoop is for sell at 0.04ETH (+ mint fees).
+                        Don't forget that a real artist is behind these NFTs
+                        (and a real dev and a real community manager :) ).
                       </b-card-text>
                     </b-card-body>
                   </b-collapse>
@@ -296,7 +296,7 @@
                 <b-card no-body class="question">
                   <b-card-header header-tag="header" class="p-1" role="tab">
                     <b-button v-b-toggle.question-4 block>
-                      <p>Where are the images for the poops storeed?</p>
+                      <p>Blockchain ? Token standard ?</p>
                       <span>+</span>
                     </b-button>
                   </b-card-header>
@@ -304,10 +304,9 @@
                   <b-collapse id="question-4" role="tabpanel">
                     <b-card-body>
                       <b-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minus, eligendi maiores repellendus in voluptatum alias
-                        incidunt hic. Debitis, molestias necessitatibus eum id
-                        quis placeat repellat, reiciendis quo officia qui sint?
+                        We deploy our mint contract on the Ethreum blockchain
+                        each CutePoop is an ERC-721 token. You can check our
+                        contract on etherscan directly.
                       </b-card-text>
                     </b-card-body>
                   </b-collapse>
@@ -319,14 +318,14 @@
             <div class="col-12 col-md-8 col-lg-6">
               <h2>Mint Your poop</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-                cumque itaque. Minus, similique nihil fugiat facere, id porro
-                quas explicabo, itaque repudiandae sed rem sunt adipisci.
-                Voluptatem qui voluptas sit!
+                You have really read all on top ? So you can't pass your way.
+                Mint our CutePoop and be glad to show it to the world !
               </p>
             </div>
             <div class="col-12 col-md-4 col-lg-6">
-              <button class="cta">Mint your own poop</button>
+              <nuxt-link :to="'/mint'">
+                <button class="cta">Mint your own poop</button>
+              </nuxt-link>
             </div>
           </div>
         </div>
