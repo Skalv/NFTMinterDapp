@@ -5,7 +5,14 @@ $red: #FF002E;
 $softBlack: #4E636B;
 $grey: #8A8C97;
 
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat&display=swap');
+@font-face {
+  font-family: "Luckiest Guy";
+  src: url("~/assets/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("~/assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
 @import "animate.css";
 
 body {
