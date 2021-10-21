@@ -4,6 +4,15 @@
     @include title;
     margin-bottom: 2em;
   }
+  .supply {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    font-family: "Luckiest guy";
+    font-size: 1.5em;
+  }
   p {
     color: white;
   }

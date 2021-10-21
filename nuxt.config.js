@@ -25,8 +25,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: "~/plugins/alchemy.js", mode: "client" },
-    { src: "~/plugins/pinata.js", mode: "server" }
+    { src: "~/plugins/alchemy.js", mode: "both" }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -60,8 +59,5 @@ export default {
     GAS_LIMIT: 285000,
     WEI_COST: "0.04", // in ether
     REVEAL_DATE: moment("2021-10-22T10")
-  },
-  privateRuntimeConfig: {
-    PINATA_SECRET: process.env.PINATA_SECRET
   }
 }

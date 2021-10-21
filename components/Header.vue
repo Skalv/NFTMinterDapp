@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col">
         <nav class="Menu">
-          <a href="#History" class="nav-link">History</a>
-          <a href="#Roadmap" class="nav-link">Roadmap</a>
-          <a href="#Attributes" class="nav-link">Attributes</a>
+          <a href="/#History" class="nav-link">History</a>
+          <a href="/#Roadmap" class="nav-link">Roadmap</a>
+          <a href="/#Attributes" class="nav-link">Attributes</a>
           <a href="/" class="logo">
             <img
               class="img-fluid d-block d-sm-none"
@@ -18,8 +18,8 @@
               alt="CutePoop logo"
             />
           </a>
-          <a href="#Team" class="nav-link">Team</a>
-          <a href="#FAQ" class="nav-link">FAQ</a>
+          <a href="/#Team" class="nav-link">Team</a>
+          <a href="/#FAQ" class="nav-link">FAQ</a>
           <button
             v-if="walletAddress === ''"
             class="btn btn-outline-primary"

@@ -9,8 +9,12 @@
               <p>Please, be patient !</p>
             </div>
             <div v-else class="col minter">
+              <div class="supply">
+                <h2>Current supply</h2>
+                <p>{{ supply }} / 10000</p>
+              </div>
               <h4>How many poop you want ?</h4>
-              <form @submit.prevent="mintNFT">
+              <form @submit.prevent="">
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <button
@@ -58,9 +62,10 @@ export default {
     }
   },
   computed: {
-    ...mapState(['walletAddress']),
+    ...mapState(['walletAddress', 'supply']),
     hereComeTheTime() {
-      return moment(this.$config.REVEAL_DATE).isBefore(moment())
+      return true
+      // return moment(this.$config.REVEAL_DATE).isBefore(moment())
     },
   },
   watch: {

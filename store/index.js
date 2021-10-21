@@ -3,7 +3,8 @@ export const state = () => ({
   toaster: {},
   name: "", // Store NFT's name
   descriptions: "", // NFT's description
-  url: "" // link to NFT's digital assets
+  url: "", // link to NFT's digital assets
+  supply: 0
 })
 
 export const mutations = {
@@ -12,31 +13,18 @@ export const mutations = {
   },
   toggleToast(state, payload) {
     state.toaster = payload
+  },
+  setTotalSupply(state, payload) {
+    state.supply = payload
   }
 }
 
 export const actions = {
   async nuxtServerInit({ dispatch }, { $config }) {
-    // await dispatch('fetchFromPinata')
+    await dispatch('getTotalSupply')
   },
-  async fetchFromPinata() {
-    const filters = {
-      status: 'pinned',
-      metadata: {
-        keyvalues: {
-          type: {
-            value: 'json',
-            op: 'eq'
-          },
-          collection: {
-            value: '1',
-            op: 'eq'
-          }
-        }
-      }
-    }
-    const result = await this.$pinata.pinList(filters)
-
-    console.log(result)
+  async getTotalSupply({ commit }) {
+    const supply = await this.app.$web3Contract.methods.totalSupply().call();
+    commit("setTotalSupply", supply)
   }
 }
