@@ -83,8 +83,8 @@ export default {
     async mintNFT() {
       const totalCost =
         this.amount * this.$web3.utils.toWei(`${this.$config.WEI_COST}`)
-      const totalGasLimit =
-        this.amount * this.$web3.utils.toWei(`${this.$config.GAS_LIMIT}`, 'wei')
+      // const totalGasLimit =
+      //   this.amount * this.$web3.utils.toWei(`${this.$config.GAS_LIMIT}`, 'wei')
 
       try {
         const txHash = await window.ethereum.request({
@@ -95,7 +95,7 @@ export default {
               from: this.walletAddress,
               data: this.$web3Contract.methods.mintNFT(this.amount).encodeABI(),
               value: `${this.$web3.utils.toHex(totalCost)}`,
-              gasLimit: `${this.$web3.utils.toHex(totalGasLimit)}`,
+              // gasLimit: `${this.$web3.utils.toHex(totalGasLimit)}`,
             },
           ],
         })
