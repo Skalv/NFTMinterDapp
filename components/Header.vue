@@ -138,14 +138,18 @@ export default {
     async connectWallet() {
       if (window.ethereum) {
         try {
-          const addressArray = await window.ethereum.request({
-            method: 'eth_requestAccounts',
-          })
-          this.setWalletAddress(addressArray[0])
-          this.toggleToast({
-            text: 'Metamask connecté !',
-            type: 'success',
-          })
+          if (window.ethereum.chainId !== '0x1') {
+            throw new Error('Wrong network ! Please use Ethereum mainnet.')
+          } else {
+            const addressArray = await window.ethereum.request({
+              method: 'eth_requestAccounts',
+            })
+            this.setWalletAddress(addressArray[0])
+            this.toggleToast({
+              text: 'Metamask connecté !',
+              type: 'success',
+            })
+          }
         } catch (err) {
           this.toggleToast({
             text: `😥 ${err.message}`,
@@ -161,15 +165,20 @@ export default {
     },
     async getCurrentWalletConnected() {
       try {
-        const addressArray = await window.ethereum.request({
-          method: 'eth_accounts',
-        })
-        if (addressArray.length > 0) {
-          this.setWalletAddress(addressArray[0])
-          this.toggleToast({
-            text: 'Metamask connecté !',
-            type: 'success',
+        if (window.ethereum.chainId !== '0x1') {
+          throw new Error('Wrong network ! Please use Ethereum mainnet.')
+        } else {
+          const addressArray = await window.ethereum.request({
+            method: 'eth_accounts',
           })
+
+          if (addressArray.length > 0) {
+            this.setWalletAddress(addressArray[0])
+            this.toggleToast({
+              text: 'Metamask connecté !',
+              type: 'success',
+            })
+          }
         }
       } catch (err) {
         this.toggleToast({

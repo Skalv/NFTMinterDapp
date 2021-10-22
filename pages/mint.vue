@@ -81,6 +81,14 @@ export default {
   methods: {
     ...mapMutations(['toggleToast']),
     async mintNFT() {
+      if (window.ethereum.chainId !== '0x1') {
+        this.toggleToast({
+          text: `😥 Wrong network, please use Ethereum mainnet!`,
+          type: 'danger',
+        })
+        return
+      }
+
       const totalCost =
         this.amount * this.$web3.utils.toWei(`${this.$config.WEI_COST}`)
       const totalGas = this.amount * 150000 + 21000
