@@ -9,10 +9,10 @@
               <p>Please, be patient !</p>
             </div>
             <div v-else class="col minter">
-              <div class="supply">
+              <!-- <div class="supply">
                 <h2>Current supply</h2>
                 <p>{{ supply }} / 10000</p>
-              </div>
+              </div> -->
               <h4>How many poop you want ?</h4>
               <form @submit.prevent="">
                 <div class="input-group">
@@ -83,8 +83,7 @@ export default {
     async mintNFT() {
       const totalCost =
         this.amount * this.$web3.utils.toWei(`${this.$config.WEI_COST}`)
-      // const totalGasLimit =
-      //   this.amount * this.$web3.utils.toWei(`${this.$config.GAS_LIMIT}`, 'wei')
+      const totalGas = this.amount * 150000 + 21000
 
       try {
         const txHash = await window.ethereum.request({
@@ -95,7 +94,8 @@ export default {
               from: this.walletAddress,
               data: this.$web3Contract.methods.mintNFT(this.amount).encodeABI(),
               value: `${this.$web3.utils.toHex(totalCost)}`,
-              // gasLimit: `${this.$web3.utils.toHex(totalGasLimit)}`,
+              gas: `${this.$web3.utils.toHex(totalGas)}`,
+              // gasLimit: `${this.$web3.utils.toHex(totalGas)}`,
             },
           ],
         })
